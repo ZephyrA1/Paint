@@ -304,6 +304,7 @@ header .logo img
 .container :hover{
   color: rgba(0, 0, 0, 0.844)b8b;
 }
+
 /* about */
 *{
   margin:0;
@@ -509,3 +510,342 @@ header .logo img
   text-decoration: none;
   border-radius: 10px;
 }
+
+/* contact page --------------------------------- */
+
+/* .location{
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+}
+.location iframe{
+  width: 100%;
+}
+.contact-us{
+  width: 80%;
+  margin: auto;
+}
+.contact-col{
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+.contact-col div{
+  display:flex;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-left: 50px;
+}
+.contact-col div .fa{
+  font-size: 28px;
+  color: #76a4d5;
+  margin-right: 30px;
+}
+.contact-col div p{
+  padding: 0;
+}
+.contact-col div h5{
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 400;
+}
+.contact-col div h6{
+  font-size: 15px;
+  color: #555;
+  font-weight: 400;
+  text-align: center;
+}
+.contact-col input, .contact-col textarea{
+
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.hero-btn:hover{
+  border: 1px solid #0e75e4;
+  background:#0e75e4 ;
+  transition: 1s;
+} */
+
+/* new contact page --------------------------------- */
+.contactUS {
+  position: relative;
+  width: 100%;
+  padding: 40px 100px;
+}
+
+.contactUS .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-align: center;
+}
+
+.contactUS .title h2 {
+  font-size: 2.0em;
+  font-weight: 300;
+  color:040404;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-shadow: 3px 3px #615f5fab;
+  padding-bottom: 10%;
+}
+
+.form {
+  grid-area: form;
+}
+
+.info {
+  grid-area: info;
+}
+
+.map {
+  grid-area: map;
+}
+
+.contact {
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+}
+
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "form info"
+  "form map";
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.contact h3 {
+  font-size: 2em;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #615f5fab;
+  margin: 20px 0;
+  padding-bottom: 5%;
+  margin-bottom: 5px;
+}
+
+/* Form */
+.formBox {
+  position: relative;
+  width: 100%;
+}
+.formBox .row50 {
+  display: flex;
+  gap: 20px;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.formBox .row100 .inputBox {
+  width: 100%;
+}
+/* form: title textbox */
+.inputBox span {
+  font-size: 1.1em;
+  color: #000000;
+  margin: 20px 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  max-width: 700px;
+}
+/* form: textbox input */
+.inputBox input {
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: #000000;
+  font-weight: 200;
+}
+/* form: textbox frame */
+.inputBox textarea {
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #000000;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #000000;
+  font-weight: 200;
+}
+/* form: button */
+.inputBox input[type="submit"] {
+  display: inline-block;
+  font-size: 1em;
+  background: #ffffff00;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #000000;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+.inputBox input[type="submit"]:hover {
+  border: 2px solid #0062ff;
+  color: rgb(0, 119, 255);
+  background:#ffffff ;
+  transition: 1s;
+  text-decoration: none;
+  border-radius: 10px;
+}
+/* form: placeholder textbox */
+.inputBox ::placeholder {
+  color: #999;
+}
+
+
+/* Info Box */
+.info {
+  background: #0e3959;
+}
+.info h3 {
+  font-size: 2em;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #615f5fab;
+  margin: 20px 0;
+  padding-bottom: 5%;
+  margin-bottom: 5px;
+}
+.info .infoBox div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.info .infoBox div span {
+  min-width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #18b7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.info .infoBox div p {
+  font-size: 1.1em;
+  color: #ffffff;
+  margin: 20px 0;
+  font-weight: 200;
+  max-width: 700px;
+}
+.info .infoBox div a {
+  font-size: 1.1em;
+  color: #ffffff;
+  margin: 20px 0;
+  font-weight: 200;
+  max-width: 700px;
+  text-decoration: none;
+}
+/* Social */
+.sci {
+  margin-top: 40px;
+  display: flex;
+  z-index: 10;
+}
+.sci ion-icon {
+  font-size: 55px;
+}
+.sci li {
+  list-style: none;
+  margin-right: 15px;
+}
+.sci li a {
+  display: inline-block;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+  color: #000000;
+  font-size: 2em;
+}
+.sci li a:hover {
+  transform: scale(0.5) translateY(-15px);
+  color: #000000;
+}
+
+
+/* Map */
+.map {
+  padding: 0;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Desgin */
+/* @media (max-width: 991px) {
+  body {
+    background: #03a9f5;
+  }
+  .contactUS {
+    padding: 20px;
+  }
+  .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "form"
+        "info"
+        "map";
+  }
+  .formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .inputBox {
+    width: 100%;
+  }
+  .contact {
+    padding: 30px;
+  }
+  .map {
+    min-height: 300px;
+    padding: 0;
+  }
+} */
