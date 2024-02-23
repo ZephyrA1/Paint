@@ -4,7 +4,7 @@
 <link rel="icon" href="images/paintlogo.png">
 <title>PointPaint Inc.</title>
 <meta name="viewport" content="with=device-width,initial-scale=1.0">
-<link rel="stylesheet" href= "style_about.css">
+<link rel="stylesheet" href= "style_contact.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
 
@@ -19,24 +19,24 @@
       
       <div class="contactUS">
         <div class="title">
-            <h2>Get in Touch</h2>
+            <h2>Contact Us</h2>
         </div>
         <div class="box">
             <!-- Form -->
             <div class="contact form">
-                <h3>Send a Message</h3>
+                <h3>Send a Request</h3>
                 <form>
                     <div class="formBox">
                         <div class="row50">
                             <!-- First Name Input Box -->
                             <div class="inputBox">
                                 <span>First Name</span>
-                                <input type="text" placeholder="John">
+                                <input type="text" placeholder="First Name">
                             </div>
                             <!-- Last Name Input Box -->
                             <div class="inputBox">
                                 <span>Last Name</span>
-                                <input type="text" placeholder="Doe">
+                                <input type="text" placeholder="Last Name">
                             </div>
                         </div>
     
@@ -44,7 +44,7 @@
                             <!-- Email Input Box -->
                             <div class="inputBox">
                                 <span>Email</span>
-                                <input type="text" placeholder="johndoe@email.com">
+                                <input type="text" placeholder="email@email.com">
                             </div>
                             <!-- Mobile Input Box -->
                             <div class="inputBox">
@@ -54,16 +54,17 @@
                         </div>
 
                         <div class="row50">
-                          <!-- Address Input Box -->
-                          <div class="inputBox">
-                              <span>Address</span>
-                              <input type="text" placeholder="111 StreetName, CITY, PROV">
-                          </div>
-                          <!-- Postal Code Input Box -->
-                          <div class="inputBox">
-                              <span>Postal Code</span>
-                              <input type="text" placeholder="A0A 0A0">
-                          </div>
+                            <!-- Address Input Box -->
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input id="autocomplete" type="text" placeholder="111 StreetName, CITY, PROV">
+                                <!-- <div id="details" type="text" placeholder="test"></div> -->
+                            </div>
+                            <!-- Postal Code Input Box -->
+                            <div class="inputBox">
+                                <span>Postal Code</span>
+                                <input type="text" placeholder="A0A 0A0">
+                            </div>
                         </div>
     
                         <div class="row100">
@@ -76,8 +77,8 @@
     
                         <div class="row100">
                             <!-- Submit Button -->
-                            <div class="inputBox">
-                                <input type="submit" value="Send">
+                            <div class="inputButton">
+                                <input type="submit" value="Submit">
                             </div>
                         </div>
                     </div>
@@ -154,11 +155,58 @@
 
 <!-- Menu Script -->
 <script>
-  const menuToggle = document.querySelector('.toggle_1');
-  const showcase = document.querySelector('.showcase_1');
+    const menuToggle = document.querySelector('.toggle_1');
+    const showcase = document.querySelector('.showcase_1');
 
-  menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      showcase.classList.toggle('active');
-  })
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+    })
 </script>
+
+<!-- Google Maps Auto Complete : https://www.youtube.com/watch?v=c3MjU9E9buQ-->
+<script>
+    let autocomplete;
+
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autocomplete'),
+            {
+                types: ['establishment'],
+                componentRestrictions: {'country': ['CA']},
+                fields: ['place_id', 'geometry', 'name']
+            }
+        );
+        autocomplete.addListener('place_changed', onPlaceChanged);
+    }
+
+    function onPlaceChanged() {
+        var place = autocomplete.getPlace();
+
+        if (!place.geometry) {
+            // User did not select a prediction; reset the input field
+            document.getElementById('autocomplete').placeholder = 'Enter a place';
+        } else {
+            // Display details about the valid place
+            document.getElementById('details').innerHTML = place.name;
+        }
+    }
+
+    // Retrieve predictions programmatically
+    var displaySuggestions = (predictions, status) => {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            predictions.forEach( (prediction) => {
+                console.log(prediction.description);
+            });
+        }
+    };
+
+    var service = new google.maps.places.AutocompleteService();
+
+    service.getQueryPredictions(
+        {input: 'pizza in New York'},
+        displaySuggestions
+    );
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNcvzs-ktlZbdNUHl_VRDbLMi9exUozw8&libraries=places&callback=initAutocomplete" async defer></script>
