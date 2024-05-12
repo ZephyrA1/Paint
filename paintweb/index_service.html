@@ -5,51 +5,160 @@
 <title>PointPaint Inc.</title>
 <meta name="viewport" content="with=device-width,initial-scale=1.0">
 <link rel="stylesheet" href= "style_service.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+
+<!-- Services Content -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
 
 
 
 
+<section class="showcase_1">
+  <div class="overlay"></div>
+  
+  <!-- Services content -->
+  <div class="introcontainer">
 
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
 
-  <section class="showcase_1">
-    <section class="container">
-      <h2>PointPaint Services</h2> 
+        <!-- Services Title -->
+        <div class="swiper-slide">
+          <div class="cards">
+            <div class="card four">
+              <img src="images/residential.jpg"/>
+              <div class="text">
+                </div>
 
-      <section class="slider-wrapper">
-        <div class="slider">
-          <img id="slider1" src="images/wr.jpg"alt="">
-          <img id="slider2" src="images/gr.jpg"alt="">
-          <img id="slider3" src="images/pr.jpg"alt="">
+            <div class="title-box">
+              <h1>OUR SERVICES</h1>
+              <p>Scroll to discover our services</p>
+            </div>
+              </div>
+          </div>
         </div>
-        <div class="slider-nav">
-          <a href="#slider1"></a>
-          <a href="#slider2"></a>
-          <a href="#slider3"></a>
-        </div>
-      </section>
-    </section>
-    <header>
-        <h2 class="logo"><a href="index_stats.html"><img src="images/paintlogo.png"></a></h2>
-      <div class="toggle_1"></div>
-    </header>
 
-    <ul class="social_1">
-      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-      <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-      <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-      <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-    </ul>
-  </section>
-  <div class="menu">
-    <ul>
-      <li><a href="index_1.html">Home</a></li>
-      <li><a href="index_about.html">About</a></li>
-      <li><a href="index_service.html">Services</a></li>
-      <li><a href="index_contact.html">Contact</a></li>
-    </ul>
+        <!-- Residential Service -->
+        <div class="swiper-slide">
+          <div class="cards">
+            <div class="card ong">
+              <img src="images/residential.jpg"/>
+              <div class="text">
+                </div>
+
+            <div class="title-box">
+              <h1>RESIDENTIAL PAINTING SERVICE.</h1>
+              <p>Update old surfaces with a fresh coat of paint. With just the  right colours, we can transform your current spaces to look like new again.</p>
+              <div class="seperator"></div>
+            </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Commercial Service -->
+        <div class="swiper-slide">
+          <div class="cards">
+            <div class="card two">
+              <img src="images/office.jpg" alt="" />
+            <div class="text">
+                </div>
+
+            <div class="title-box">
+              <h1>COMMERCIAL PAINTING SERVICE.</h1>
+              <p>Enlist our expertise for unparalleled commercial painting services that redefine the aesthetics of your business environment.</p>
+              <div class="seperator"></div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <!-- Exterior Service -->
+        <div class="swiper-slide">
+          <div class="cards">
+            <div class="card three">
+              <img src="images/garage.jpg" alt="" />
+              <div class="text">
+                </div>
+    
+            <div class="title-box">
+              <h1>EXTERIOR PAINTING.</h1>
+              <p>Enhance the look of your home's exterior with a gorgeous new driveway, garage door, and roof.</p>
+              <div class="seperator"></div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination" style="bottom: 100px;"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-arrows">
+      <div class="swiper-button-prev"><span></span></div>
+      <div class="swiper-button-next"><span></span></div>
+    </div>
+
+      <!-- If we need scrollbar -->
+    </div>
   </div>
+
+  <!-- Swipping Script -->
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      speed: 500,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      centeredSlides: true,
+      paginationClickable: true,
+      watchSlidesProgress: true,
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+
+
+
+
+
+  <!-- Logo + Menu toggle -->
+  <header>
+    <h2 class="logo"><a href="index_1.html"><img src="images/paintlogo.png"></a></h2>
+    <div class="toggle_1"></div>
+  </header>
+
+  <!-- Social -->
+  <ul class="social_1">
+    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+  </ul>
+</section>
+
+
+<!-- Menu -->
+<div class="menu">
+  <ul>
+    <li><a href="index_1.html">Home</a></li>
+    <li><a href="index_about.html">About</a></li>
+    <li><a href="index_service.html">Services</a></li>
+    <li><a href="index_contact.html">Contact</a></li>
+  </ul>
+</div>
 
 
 
