@@ -21,7 +21,7 @@ header
 /* ----------------- Logo ----------------- */
 header .logo img
 {
-  width: 150px;
+  width: 250px;
   /* color: #00000000; */
 }
 /* ----------------- Menu toggle ----------------- */
@@ -83,7 +83,7 @@ header .logo img
   z-index: 1;
 
   background-color: #ffffff;
-  background-image: url("images/back3.jpg");
+  background-image: url("images/back4.jpg");
   background-size: cover;
   object-fit: cover;
 }
@@ -99,8 +99,6 @@ header .logo img
 	  background-position-x: 10000px;
 	}
 }
-
-/* ----------------- Background ----------------- */
 .overlay
 {
   position: absolute;
@@ -108,7 +106,7 @@ header .logo img
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000000fa;
+  background: #000000c9;
   mix-blend-mode: overlay;
 }
 
